@@ -21,5 +21,10 @@ namespace Cashierless_Checkout
         {
             this.Close();
         }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

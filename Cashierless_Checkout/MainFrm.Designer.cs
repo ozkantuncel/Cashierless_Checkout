@@ -93,6 +93,7 @@
             this.customButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.customButton2.TextColor = System.Drawing.Color.Black;
             this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // customButton1
             // 
