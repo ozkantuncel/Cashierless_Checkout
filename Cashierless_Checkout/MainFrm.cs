@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Cashierless_Checkout
 {
-    public partial class Form1 : Form
+    public partial class MainFrm : Form
     {
-        public Form1()
+        public MainFrm()
         {
             InitializeComponent();
+        }
+
+        private void customPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
