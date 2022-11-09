@@ -26,5 +26,12 @@ namespace Cashierless_Checkout
         {
 
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            CheckoutFrm chkFrm = new CheckoutFrm();
+            this.Hide();
+            chkFrm.Show();
+        }
     }
 }

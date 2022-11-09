@@ -113,6 +113,7 @@
             this.customButton1.Text = "Başlamak için tıklayın";
             this.customButton1.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // MainFrm
             // 
