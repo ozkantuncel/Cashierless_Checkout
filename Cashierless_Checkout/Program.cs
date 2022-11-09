@@ -16,7 +16,7 @@ namespace Cashierless_Checkout
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckoutFrm());
+            Application.Run(new MainFrm());
         }
     }
 }

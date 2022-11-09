@@ -170,6 +170,14 @@ namespace Cashierless_Checkout
         {
             foreach(ListViewItem selectedInfo in listScanner.CheckedItems)
             {
+                int pr, tax, prWTaxx;
+                pr = Int32.Parse(selectedInfo.SubItems[4].Text);
+                tax = Int32.Parse(selectedInfo.SubItems[5].Text);
+                prWTaxx = pr - tax;
+                totalPrice -= pr;
+                totalTax -= tax;
+                totalPriceWTax-= prWTaxx;
+                totalLabels(totalPrice, totalTax, totalPriceWTax);
                 selectedInfo.Remove();
             }
         }
@@ -177,6 +185,11 @@ namespace Cashierless_Checkout
         private void listScanner_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void customPictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
