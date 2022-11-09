@@ -19,12 +19,14 @@ namespace Cashierless_Checkout
         {
             InitializeComponent();
         }
+        
+        private FilterInfoCollection Cameras;
+        private VideoCaptureDevice camera;
 
-        FilterInfoCollection Cameras;
-        VideoCaptureDevice camera;
-        bool isSca = true;
-        double totalPrice=0;
-        double totalTax = 0;
+        private bool isSca = true;
+        private double totalPrice=0;
+        private double totalTax = 0;
+        private double totalPriceWTax = 0;
 
         CashierlessCheckoutProductEntities db = new CashierlessCheckoutProductEntities();
 
@@ -33,15 +35,14 @@ namespace Cashierless_Checkout
             ScannerListMaker();
             Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
-            camera = new VideoCaptureDevice(Cameras[2].MonikerString);
+            camera = new VideoCaptureDevice(Cameras[2].MonikerString);//0 Phone 2 PC
 
             camera.NewFrame += VideoCaptureDevice_NewFrame;
             camera.Start();
         }
 
         private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
-        {
-             
+        {            
             Bitmap ThatBarkod = (Bitmap)eventArgs.Frame.Clone();
 
             if (isSca)
@@ -50,31 +51,12 @@ namespace Cashierless_Checkout
 
                 var result = scanner.Decode(ThatBarkod);
 
-
                 if (result != null)
-                {
-                     
+                {                    
                     string scn = result.ToString();
-
-                    string br, urnN, urterN, katN, fiyat, vergi;
-
-                    foreach (var a in db.TBL_Barcode.Where(a => a.barcode.Contains(scn)))
-                    {
-                        br = a.barcode;
-                        urnN = a.TBL_Product.productName;
-                        urterN = a.TBL_Product.TBL_Producter.producterName;
-                        katN = a.TBL_Product.TBL_Category.CategoryName;
-                        fiyat = a.TBL_Product.price.ToString();
-                        vergi = a.TBL_Product.tax.ToString();
-                        string[] lst = { br, urnN, urterN, katN, fiyat, vergi };
-                        ScannerListAdItem(lst);
-                        totalPrice += double.Parse(fiyat);
-                        totalTax += double.Parse(vergi);
-                        totalLabels(totalPrice, totalTax);
-                    }
+                    AddListBarcodeScanner(scn);
                     isSca = false;
                     isAvabileScanner();
-
                 }
             }    
             scannerBarcode.Image = ThatBarkod;
@@ -90,30 +72,53 @@ namespace Cashierless_Checkout
             listScanner.Columns.Add("Vergi", 60);
         }
 
-        private void ScannerListAdItem(string[] a)
+        private void AddListBarcodeScanner(string scn)
         {
-            
+            string br, urnN, urterN, katN, fiyat, vergi;
+
+            foreach (var a in db.TBL_Barcode.Where(a => a.barcode.Contains(scn)))
+            {
+                br = a.barcode;
+                urnN = a.TBL_Product.productName;
+                urterN = a.TBL_Product.TBL_Producter.producterName;
+                katN = a.TBL_Product.TBL_Category.CategoryName;
+                fiyat = a.TBL_Product.price.ToString();
+                vergi = a.TBL_Product.tax.ToString();
+                string[] lst = { br, urnN, urterN, katN, fiyat, vergi };
+                ScannerListAdItem(lst);
+                totalPrice += double.Parse(fiyat);
+                totalTax += double.Parse(vergi);
+                totalPriceWTax = totalPrice - totalTax;
+                totalLabels(totalPrice, totalTax, totalPriceWTax);
+            }
+        }
+
+        private void ScannerListAdItem(string[] a)
+        {            
             ListViewItem lst = new ListViewItem(a);
 
             listScanner.Invoke(new MethodInvoker(delegate ()
             {
-
-                listScanner.Items.Add(lst);
-                 
+                listScanner.Items.Add(lst);                 
             }));   
         }
-
-        private void totalLabels(double priceT, double taxT)
+       
+        private void totalLabels(double priceT, double taxT, double priceWtax)
         {
-            totalPriceLabel.Invoke(new MethodInvoker(delegate ()
+            totalPriceWTaxLabel.Invoke(new MethodInvoker(delegate ()
             {
-                totalPriceLabel.Text = priceT.ToString();
+                totalPriceWTaxLabel.Text = priceT.ToString();
             }));
 
             totalTaxLabel.Invoke(new MethodInvoker(delegate ()
             {
                 totalTaxLabel.Text = taxT.ToString();
-            }));           
+            }));
+
+            totalPLabel.Invoke(new MethodInvoker(delegate ()
+            {
+                totalPLabel.Text = priceWtax.ToString();
+            }));
         }
 
         private void isAvabileScanner()
@@ -134,13 +139,44 @@ namespace Cashierless_Checkout
 
         private void odmButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(isSca.ToString());
+            MessageBox.Show("Ödeme Ekrani");
         }
 
         private void urnEkleBtn_Click(object sender, EventArgs e)
         {
             isSca = true;
             isAvabileScanner();
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            if(textBoxBarcode.Text != "")
+            {
+                string scr = textBoxBarcode.Text;
+                AddListBarcodeScanner(scr);
+                textBoxBarcode.Text = "";
+            }
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            listScanner.Items.Clear();
+            totalPriceWTax = 0;totalPrice = 0;totalTax = 0;
+            totalLabels(totalPrice, totalTax, totalPriceWTax);
+
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem selectedInfo in listScanner.CheckedItems)
+            {
+                selectedInfo.Remove();
+            }
+        }
+
+        private void listScanner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
