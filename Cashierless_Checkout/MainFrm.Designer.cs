@@ -61,7 +61,8 @@
             // 
             // customPictureBox1
             // 
-            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.customPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
             this.customPictureBox1.Location = new System.Drawing.Point(1020, 12);
             this.customPictureBox1.Name = "customPictureBox1";
@@ -89,7 +90,7 @@
             this.customButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.customButton2.Size = new System.Drawing.Size(170, 57);
             this.customButton2.TabIndex = 2;
-            this.customButton2.Text = "Yardım";
+            this.customButton2.Text = "Yardım   ";
             this.customButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.customButton2.TextColor = System.Drawing.Color.Black;
             this.customButton2.UseVisualStyleBackColor = false;
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1063, 550);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.customPictureBox1);

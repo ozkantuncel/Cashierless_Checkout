@@ -56,7 +56,7 @@
             // scannerBarcode
             // 
             this.scannerBarcode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.scannerBarcode.Location = new System.Drawing.Point(785, 41);
+            this.scannerBarcode.Location = new System.Drawing.Point(998, 41);
             this.scannerBarcode.Name = "scannerBarcode";
             this.scannerBarcode.Size = new System.Drawing.Size(508, 347);
             this.scannerBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(598, 557);
+            this.label1.Location = new System.Drawing.Point(840, 557);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 7;
@@ -77,7 +77,7 @@
             // 
             this.totalPriceWTaxLabel.AutoSize = true;
             this.totalPriceWTaxLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.totalPriceWTaxLabel.Location = new System.Drawing.Point(723, 618);
+            this.totalPriceWTaxLabel.Location = new System.Drawing.Point(965, 618);
             this.totalPriceWTaxLabel.Name = "totalPriceWTaxLabel";
             this.totalPriceWTaxLabel.Size = new System.Drawing.Size(20, 22);
             this.totalPriceWTaxLabel.TabIndex = 8;
@@ -87,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(669, 587);
+            this.label3.Location = new System.Drawing.Point(911, 587);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 9;
@@ -97,7 +97,7 @@
             // 
             this.totalTaxLabel.AutoSize = true;
             this.totalTaxLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.totalTaxLabel.Location = new System.Drawing.Point(723, 587);
+            this.totalTaxLabel.Location = new System.Drawing.Point(965, 587);
             this.totalTaxLabel.Name = "totalTaxLabel";
             this.totalTaxLabel.Size = new System.Drawing.Size(20, 22);
             this.totalTaxLabel.TabIndex = 10;
@@ -111,7 +111,7 @@
             this.listScanner.HideSelection = false;
             this.listScanner.Location = new System.Drawing.Point(9, 41);
             this.listScanner.Name = "listScanner";
-            this.listScanner.Size = new System.Drawing.Size(768, 510);
+            this.listScanner.Size = new System.Drawing.Size(983, 510);
             this.listScanner.TabIndex = 3;
             this.listScanner.UseCompatibleStateImageBehavior = false;
             this.listScanner.View = System.Windows.Forms.View.Details;
@@ -133,7 +133,7 @@
             // 
             this.totalPLabel.AutoSize = true;
             this.totalPLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.totalPLabel.Location = new System.Drawing.Point(723, 557);
+            this.totalPLabel.Location = new System.Drawing.Point(965, 557);
             this.totalPLabel.Name = "totalPLabel";
             this.totalPLabel.Size = new System.Drawing.Size(20, 22);
             this.totalPLabel.TabIndex = 16;
@@ -143,7 +143,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(598, 618);
+            this.label4.Location = new System.Drawing.Point(840, 618);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 22);
             this.label4.TabIndex = 15;
@@ -153,7 +153,7 @@
             // 
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(598, 616);
+            this.label5.Location = new System.Drawing.Point(840, 616);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 2);
             this.label5.TabIndex = 17;
@@ -163,7 +163,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBoxBarcode);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(786, 395);
+            this.groupBox1.Location = new System.Drawing.Point(999, 395);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(507, 50);
             this.groupBox1.TabIndex = 18;
@@ -199,7 +199,7 @@
             this.customButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customButton3.Image = ((System.Drawing.Image)(resources.GetObject("customButton3.Image")));
             this.customButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton3.Location = new System.Drawing.Point(785, 451);
+            this.customButton3.Location = new System.Drawing.Point(998, 451);
             this.customButton3.Name = "customButton3";
             this.customButton3.Size = new System.Drawing.Size(247, 91);
             this.customButton3.TabIndex = 13;
@@ -222,7 +222,7 @@
             this.customButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customButton2.Image = ((System.Drawing.Image)(resources.GetObject("customButton2.Image")));
             this.customButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton2.Location = new System.Drawing.Point(1038, 451);
+            this.customButton2.Location = new System.Drawing.Point(1251, 451);
             this.customButton2.Name = "customButton2";
             this.customButton2.Size = new System.Drawing.Size(255, 91);
             this.customButton2.TabIndex = 12;
@@ -243,9 +243,9 @@
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.customButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.customButton1.Location = new System.Drawing.Point(142, 584);
+            this.customButton1.Location = new System.Drawing.Point(157, 584);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(125, 48);
+            this.customButton1.Size = new System.Drawing.Size(129, 48);
             this.customButton1.TabIndex = 11;
             this.customButton1.Text = "Sil";
             this.customButton1.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -265,7 +265,7 @@
             this.urnEkleBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.urnEkleBtn.Location = new System.Drawing.Point(11, 584);
             this.urnEkleBtn.Name = "urnEkleBtn";
-            this.urnEkleBtn.Size = new System.Drawing.Size(125, 48);
+            this.urnEkleBtn.Size = new System.Drawing.Size(129, 48);
             this.urnEkleBtn.TabIndex = 6;
             this.urnEkleBtn.Text = "Ekle";
             this.urnEkleBtn.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -274,9 +274,9 @@
             // 
             // customPictureBox1
             // 
-            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(1262, 12);
+            this.customPictureBox1.Location = new System.Drawing.Point(1475, 12);
             this.customPictureBox1.Name = "customPictureBox1";
             this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
             this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,7 +295,7 @@
             this.odmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.odmButton.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.odmButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.odmButton.Location = new System.Drawing.Point(796, 548);
+            this.odmButton.Location = new System.Drawing.Point(1009, 548);
             this.odmButton.Name = "odmButton";
             this.odmButton.Size = new System.Drawing.Size(491, 89);
             this.odmButton.TabIndex = 1;
@@ -309,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1305, 641);
+            this.ClientSize = new System.Drawing.Size(1518, 641);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.totalPLabel);

@@ -13,8 +13,11 @@ using ZXing;
 
 namespace Cashierless_Checkout
 {
+     
     public partial class CheckoutFrm : Form
     {
+
+
         public CheckoutFrm()
         {
             InitializeComponent();
@@ -65,11 +68,11 @@ namespace Cashierless_Checkout
         private void ScannerListMaker()
         {
             listScanner.Columns.Add("Barkod",125);
-            listScanner.Columns.Add("Ürün adı", 125);
-            listScanner.Columns.Add("Üretici", 125);
+            listScanner.Columns.Add("Ürün adı", 250);
+            listScanner.Columns.Add("Üretici", 150);
             listScanner.Columns.Add("Kategori", 75);
-            listScanner.Columns.Add("Fiyat", 60);
-            listScanner.Columns.Add("Vergi", 60);
+            listScanner.Columns.Add("Fiyat", 70);
+            listScanner.Columns.Add("Vergi", 70);
         }
 
         private void AddListBarcodeScanner(string scn)
@@ -184,7 +187,7 @@ namespace Cashierless_Checkout
 
         private void listScanner_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //NO OP
         }
 
         private void customPictureBox1_Click(object sender, EventArgs e)
