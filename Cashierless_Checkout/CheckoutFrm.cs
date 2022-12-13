@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,6 +31,10 @@ namespace Cashierless_Checkout
         private double totalPrice=0;
         private double totalTax = 0;
         private double totalPriceWTax = 0;
+        private List<String> productNames = new List<String>();
+        private List<String> producterNames = new List<String>();
+        private List<int> productPrice = new List<int>();
+        private List<int> productTax = new List<int>();
 
         CashierlessCheckoutProductEntities db = new CashierlessCheckoutProductEntities();
 
@@ -87,6 +92,10 @@ namespace Cashierless_Checkout
                 katN = a.TBL_Product.TBL_Category.CategoryName;
                 fiyat = a.TBL_Product.price.ToString();
                 vergi = a.TBL_Product.tax.ToString();
+                productNames.Add(urnN);
+                producterNames.Add(urterN);
+                productPrice.Add(Convert.ToInt32(fiyat));
+                productTax.Add(Convert.ToInt32(vergi));
                 string[] lst = { br, urnN, urterN, katN, fiyat, vergi };
                 ScannerListAdItem(lst);
                 totalPrice += double.Parse(fiyat);
@@ -142,7 +151,27 @@ namespace Cashierless_Checkout
 
         private void odmButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ödeme Ekrani");
+            if(totalPrice != 0)
+            {
+                var paymenttoJson = new PaymentJson()
+                {
+                    Date = DateTime.Now.ToString("MM/dd/yyyy HH:mm").Replace(" ",""),
+                    ProductNames = productNames.ToArray(),
+                    ProducerNames = producterNames.ToArray(),
+                    ProductTotalPrice = productPrice.ToArray(),
+                    ProductTax = productTax.ToArray(),
+                    TotalPrice = Convert.ToInt32(totalPriceWTaxLabel.Text)
+                };
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
+                PaymentFrm paymentFrm = new PaymentFrm(jsonToString, totalPrice);
+                paymentFrm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen barkodu okutun");
+            }
+            
         }
 
         private void urnEkleBtn_Click(object sender, EventArgs e)
