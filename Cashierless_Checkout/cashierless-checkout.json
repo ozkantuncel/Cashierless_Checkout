@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cashierless-checkout",
+  "private_key_id": "dff36c298028bdb9cb8cb0870a46234e18cf80ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8uwIKPPoAaXD8\nceVaNWIIysFXjR72JQv+SnGdfr5RNCOno/nDVb7tWOywxjUaqpWnAEbZ+oQ62oEo\necFD8/mkRsqwJc+BLJ3Gkh1zWFm4r3O02TNfJr7uy8JBderYzCXa9rxAGixRDDNx\nkI56GZRl0R9JEHARBfAkDcfHD3APfIIHUtDMOL5rHMZaAeUXFfBJdt64tonx8dhv\nflmK5eoXKMmlCVy6vWq9bHxojN902qnxE8uylHj6FVu7mwEUCzKJOvnb63dY+hqf\nXzFRfl6P0FCEBWWdodM6auXvtTa2devcL/jTfSp0POkRYVrpsDTxsO1eyObtmpJO\nXpRKSuoxAgMBAAECggEALDiGJxd3/Xo3QNNACdW5wXUefbDheQufpobTXbN5jOXS\nV+COMFRqPssn9FiQz016cK2aLE9sRaz2d+ElZVJoYzM6ITFO0EW/tyv7zg+8wA8O\nJakBxjD6KlIgUz25l/Ani4ll/QAU862P7TNRiu7s7DlmYvSAyaBSTuRSs8PcfigH\ndOtv1rNOmiEJhOzz/Ywy7kIPwksDhYW+uLsqjYHpWlxH+/5x0CM7qvFZTwWdcwfh\nzXZhCZqrdv2snlGzbz/EbTNedbYPqMdvJCo0vaAd0tci2Y8erPLG+VfCJueKM3mD\nHFjGNIFb55+ZTBNMePD9PVnix0mYk3xF/Ni6kjzlZQKBgQDh+WrD5soEHgUHS6FR\nsBUSGgWsKOxXveY6yt1dPjJN5LLGvbmy3WF2u02iOlSVwMRgUNm/s9GgPCamwgY8\ngTxPTQQnDhEbK+vdZ40QBbJ6ADB/QpukHmDhn6yHWZFATTLbu5w/+hCwfoZFeC/i\nA1+fpljtE61Z8vPlETRbE1F9bQKBgQDVzrt/CbtYCZrntr/R+UyOTjvx6sO+RUdu\ntJshEtT/KE9i9oqlRCY8xGQCReCwa86v7ol8SfyfvXnQfsIsClmxprSSfkn31ZAt\nKXYH+afAFcIGER7/d554j4Yu5UR7duQvcUOHNtk4cjbowZ2Gv98XJkosoLVZhZeP\ne5yoEis5VQKBgQCANyWV6+AZv/K4dfgdQlxiPfOUAFBBZJU6LJq3ai/etHGfhEzW\nKPhBBvuAnboakhqaT6WNOPkrApYnrhUdxXIzyI4fnsKj+SLGKBgIzEK9KFhcDK4E\ny9vKiO+6iF567pJ5zJRWVIudqNyElDIO+j0Kd7cjJTQJwmkSQtXDC04EbQKBgALt\n/D+3YGvKZeb66BH2eogQpl2gO+JljJ8FtoJzgZulb8EJY8jz8BoxDrXBQ1znfUOH\n3zZmxSFjNUIYGo0D70qx4BOJy3Wr5XfY85cUYqoNIkV3Ape5ieBZBxupZJDUhjfo\nM2as57kQR5RU4tWv11y315hY82Mwo20B4pmi9hipAoGBAI1RjWwLcu9bC9owc7JH\n/kYy5IuU80023eRwd1938DPDt3hOEMDFN4yQw/tBZRLf1vEneKOkitvxZgLhlNf1\n7G1eGWLlVlZbkcsmdsDkBhs4So8n1poXPTFr8UzSlox9LxN0/50LTuqLubsZSeVr\nXvM0hENQjkT6IDuO8UeykWoO\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-4xst4@cashierless-checkout.iam.gserviceaccount.com",
+  "client_id": "107759367631836855950",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4xst4%40cashierless-checkout.iam.gserviceaccount.com"
+}
