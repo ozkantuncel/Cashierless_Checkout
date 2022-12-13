@@ -153,9 +153,10 @@ namespace Cashierless_Checkout
         {
             if(totalPrice != 0)
             {
+                string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm").Replace(" ", "");
                 var paymenttoJson = new PaymentJson()
                 {
-                    Date = DateTime.Now.ToString("MM/dd/yyyy HH:mm").Replace(" ",""),
+                    Date = date,
                     ProductNames = productNames.ToArray(),
                     ProducerNames = producterNames.ToArray(),
                     ProductTotalPrice = productPrice.ToArray(),
@@ -164,7 +165,7 @@ namespace Cashierless_Checkout
                 };
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
-                PaymentFrm paymentFrm = new PaymentFrm(jsonToString, totalPrice);
+                PaymentFrm paymentFrm = new PaymentFrm(jsonToString, totalPrice,date);
                 paymentFrm.Show();
             }
             else

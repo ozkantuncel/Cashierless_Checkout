@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTotalP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictrboxQR = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.countDownLbl = new System.Windows.Forms.Label();
             this.cBtnCancel = new Cashierless_Checkout.CustomButton();
+            this.countDownT = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictrboxQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.lblTotalP.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalP.Location = new System.Drawing.Point(205, 62);
             this.lblTotalP.Name = "lblTotalP";
-            this.lblTotalP.Size = new System.Drawing.Size(107, 51);
+            this.lblTotalP.Size = new System.Drawing.Size(106, 50);
             this.lblTotalP.TabIndex = 0;
             this.lblTotalP.Text = "0.0 tl";
             this.lblTotalP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -66,15 +68,15 @@
             this.pictrboxQR.TabIndex = 2;
             this.pictrboxQR.TabStop = false;
             // 
-            // label3
+            // countDownLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(243, 458);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 33);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "00";
+            this.countDownLbl.AutoSize = true;
+            this.countDownLbl.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.countDownLbl.Location = new System.Drawing.Point(243, 458);
+            this.countDownLbl.Name = "countDownLbl";
+            this.countDownLbl.Size = new System.Drawing.Size(43, 33);
+            this.countDownLbl.TabIndex = 15;
+            this.countDownLbl.Text = "00";
             // 
             // cBtnCancel
             // 
@@ -98,13 +100,17 @@
             this.cBtnCancel.UseVisualStyleBackColor = false;
             this.cBtnCancel.Click += new System.EventHandler(this.cBtnCancel_Click);
             // 
+            // countDownT
+            // 
+            this.countDownT.Tick += new System.EventHandler(this.CountDownTick);
+            // 
             // PaymentFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(521, 665);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.countDownLbl);
             this.Controls.Add(this.cBtnCancel);
             this.Controls.Add(this.pictrboxQR);
             this.Controls.Add(this.label2);
@@ -128,6 +134,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictrboxQR;
         private CustomButton cBtnCancel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label countDownLbl;
+        private System.Windows.Forms.Timer countDownT;
     }
 }
