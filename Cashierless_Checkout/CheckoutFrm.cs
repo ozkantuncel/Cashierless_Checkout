@@ -39,7 +39,7 @@ namespace Cashierless_Checkout
         CashierlessCheckoutProductEntities db = new CashierlessCheckoutProductEntities();
 
         private void CheckoutFrm_Load(object sender, EventArgs e)
-        {
+        { 
             ScannerListMaker();
             Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -167,6 +167,7 @@ namespace Cashierless_Checkout
                 string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
                 PaymentFrm paymentFrm = new PaymentFrm(jsonToString, totalPrice,date);
                 paymentFrm.Show();
+                this.Close();
             }
             else
             {

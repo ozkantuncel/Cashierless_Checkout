@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cashierless_Checkout.firebase.dto.Check">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>firebase\dto\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cashierless_Checkout.CheckoutFrm">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="customPictureBox1" Type="Cashierless_Checkout.CustomPictureBox" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.125" Y="4.75" />
+        <Point X="6.125" Y="4.375" />
+        <Point X="5.833" Y="4.375" Type="JumpStart" />
+        <Point X="5.667" Y="4.375" Type="JumpEnd" />
+        <Point X="5.427" Y="4.375" Type="JumpStart" />
+        <Point X="5.261" Y="4.375" Type="JumpEnd" />
+        <Point X="1.688" Y="4.375" />
+        <Point X="1.688" Y="3.941" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="customButton1" Type="Cashierless_Checkout.CustomButton" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.344" Y="4.75" />
+        <Point X="5.344" Y="2.375" />
+        <Point X="4.708" Y="2.375" Type="JumpStart" />
+        <Point X="4.542" Y="2.375" Type="JumpEnd" />
+        <Point X="3.708" Y="2.375" Type="JumpStart" />
+        <Point X="3.542" Y="2.375" Type="JumpEnd" />
+        <Point X="3.25" Y="2.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIEAAACMAzBQABCBIACAAABKAEAEAQEAAKoRQEDQgwI=</HashCode>
+      <FileName>CheckoutFrm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Cameras" />
+      <Field Name="camera" />
+      <Field Name="db" />
+      <Field Name="customPictureBox1" />
+      <Field Name="customButton1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Cashierless_Checkout.CustomButton" Collapsed="true">
+    <Position X="1.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIgAAACIAAAAAIAgIgAABCCAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cashierless_Checkout.CustomPictureBox" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomPictureBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cashierless_Checkout.MainFrm">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <AssociationLine Name="customButton1" Type="Cashierless_Checkout.CustomButton" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.844" Y="2" />
+        <Point X="6.844" Y="1.75" />
+        <Point X="5.833" Y="1.75" Type="JumpStart" />
+        <Point X="5.667" Y="1.75" Type="JumpEnd" />
+        <Point X="4.708" Y="1.75" Type="JumpStart" />
+        <Point X="4.542" Y="1.75" Type="JumpEnd" />
+        <Point X="2.812" Y="1.75" />
+        <Point X="2.812" Y="2.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="customButton2" Type="Cashierless_Checkout.CustomButton" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.035" />
+        <Point X="5.833" Y="4.035" Type="JumpStart" />
+        <Point X="5.667" Y="4.035" Type="JumpEnd" />
+        <Point X="5.427" Y="4.035" Type="JumpStart" />
+        <Point X="5.261" Y="4.035" Type="JumpEnd" />
+        <Point X="2.875" Y="4.035" />
+        <Point X="2.875" Y="2.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.115" Y="0.035" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="customPictureBox1" Type="Cashierless_Checkout.CustomPictureBox" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.812" />
+        <Point X="5.833" Y="3.812" Type="JumpStart" />
+        <Point X="5.667" Y="3.812" Type="JumpEnd" />
+        <Point X="5.427" Y="3.812" Type="JumpStart" />
+        <Point X="5.261" Y="3.812" Type="JumpEnd" />
+        <Point X="2.958" Y="3.812" Type="JumpStart" />
+        <Point X="2.792" Y="3.812" Type="JumpEnd" />
+        <Point X="2" Y="3.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAyAAABAAIACAAAACAAAEAAAAAAAAAADAAAA=</HashCode>
+      <FileName>MainFrm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="customButton1" />
+      <Field Name="customButton2" />
+      <Field Name="customPictureBox1" />
+      <Field Name="pictureBox1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Cashierless_Checkout.PaymentFrm">
+    <Position X="8.5" Y="4" Width="1.75" />
+    <AssociationLine Name="cBtnCancel" Type="Cashierless_Checkout.CustomButton" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.906" Y="4" />
+        <Point X="8.906" Y="1.75" />
+        <Point X="7.333" Y="1.75" Type="JumpStart" />
+        <Point X="7.167" Y="1.75" Type="JumpEnd" />
+        <Point X="5.833" Y="1.75" Type="JumpStart" />
+        <Point X="5.667" Y="1.75" Type="JumpEnd" />
+        <Point X="4.708" Y="1.75" Type="JumpStart" />
+        <Point X="4.542" Y="1.75" Type="JumpEnd" />
+        <Point X="3.625" Y="1.75" />
+        <Point X="3.625" Y="2.875" />
+        <Point X="3.25" Y="2.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAECAAABFBAASAQABKAAAAEABAQCAAAAAAAQA=</HashCode>
+      <FileName>PaymentFrm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cBtnCancel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Cashierless_Checkout.PaymentJson">
+    <Position X="11.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAEQIABAAAAAAAIAAA=</HashCode>
+      <FileName>PaymentJson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.PictureBox" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Forms.Button" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cashierless_Checkout.CashierlessCheckoutProductEntities">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAEACgAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Model1.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AForge.Video.DirectShow.VideoCaptureDevice" Collapsed="true">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="AForge.Video.DirectShow.FilterInfoCollection" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

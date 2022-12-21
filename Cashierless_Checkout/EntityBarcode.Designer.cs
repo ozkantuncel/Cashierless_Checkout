@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ozkan\OneDrive\Masaüstü\Programlama\2.Sınıf\NTP\Ders Kodları\Cashierless_Checkout\Cashierless_Checkout\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\ozkan\OneDrive\Masaüstü\Programlama\2.Sınıf\NTP\Ders Kodları\Cashierless_Checkout\Cashierless_Checkout\EntityBarcode.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

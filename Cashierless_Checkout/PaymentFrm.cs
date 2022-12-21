@@ -22,7 +22,7 @@ namespace Cashierless_Checkout
         private string dateL;
         private FirestoreDb database;
 
-        private int sec = 60;
+        private int sec = 59;
 
         public PaymentFrm(string jsonString, double totalPrice,string dateL)
         {
@@ -60,19 +60,20 @@ namespace Cashierless_Checkout
 
              if (snap.Exists)
              {
-                Check check = snap.ConvertTo<Check>();
-                MessageBox.Show("Ödeme başaralı bir şekilde tamalandı");
                 countDownT.Stop();
-                CheckoutFrm frm = new CheckoutFrm();
+                Check check = snap.ConvertTo<Check>();
+                MessageBox.Show("Ödeme başaralı bir şekilde tamalandı");               
+                MainFrm frm = new MainFrm();
                 this.Close();
+                frm.Show();
             }
              
         }
 
         private void CountDownTick(object sender,EventArgs e)
         {
-            
-            countDownLbl.Text = sec--.ToString();
+            int s = --sec;
+            countDownLbl.Text = s.ToString();
 
             if (sec < 0)
             {
