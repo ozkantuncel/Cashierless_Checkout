@@ -1,4 +1,5 @@
 ﻿using AForge.Video.DirectShow;
+using DevExpress.Utils.About;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,7 @@ namespace Cashierless_Checkout
         private double totalPrice=0;
         private double totalTax = 0;
         private double totalPriceWTax = 0;
+        private List<short> productId = new List<short>(); 
         private List<String> productNames = new List<String>();
         private List<String> producterNames = new List<String>();
         private List<int> productPrice = new List<int>();
@@ -86,12 +88,16 @@ namespace Cashierless_Checkout
 
             foreach (var a in db.TBL_Barcode.Where(a => a.barcode.Contains(scn)))
             {
+
                 br = a.barcode;
                 urnN = a.TBL_Product.productName;
                 urterN = a.TBL_Product.TBL_Producter.producterName;
                 katN = a.TBL_Product.TBL_Category.CategoryName;
                 fiyat = a.TBL_Product.price.ToString();
                 vergi = a.TBL_Product.tax.ToString();
+
+                productId.Add(a.TBL_Product.id);
+
                 productNames.Add(urnN);
                 producterNames.Add(urterN);
                 productPrice.Add(Convert.ToInt32(fiyat));
@@ -157,15 +163,14 @@ namespace Cashierless_Checkout
                 var paymenttoJson = new PaymentJson()
                 {
                     Date = date,
+                    ProductId = productId.ToArray(),
                     ProductNames = productNames.ToArray(),
                     ProducerNames = producterNames.ToArray(),
                     ProductTotalPrice = productPrice.ToArray(),
                     ProductTax = productTax.ToArray(),
                     TotalPrice = Convert.ToInt32(totalPriceWTaxLabel.Text)
                 };
-                var options = new JsonSerializerOptions { WriteIndented = true };
-                string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
-                PaymentFrm paymentFrm = new PaymentFrm(jsonToString, totalPrice,date);
+                PaymentFrm paymentFrm = new PaymentFrm(paymenttoJson);
                 paymentFrm.Show();
                 this.Close();
             }

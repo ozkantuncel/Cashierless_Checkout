@@ -10,6 +10,7 @@ namespace Cashierless_Checkout
     {
         public string Date {get; set; }
         public int TotalPrice { get; set; }
+        public short[] ProductId { get; set; }
         public string[] ProductNames { get; set; }
         public string[] ProducerNames { get; set; }
         public int[] ProductTotalPrice { get; set; } 

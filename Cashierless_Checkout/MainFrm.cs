@@ -19,7 +19,7 @@ namespace Cashierless_Checkout
 
         private void customPictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void customButton2_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace Cashierless_Checkout
         {
             CheckoutFrm chkFrm = new CheckoutFrm();
             this.Hide();
-            chkFrm.Show();
+            chkFrm.Show();            
         }
     }
 }

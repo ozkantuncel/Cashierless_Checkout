@@ -209,6 +209,42 @@
     <Compile Include="CustomPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="entity\admin\EntityAdmin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityAdmin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\admin\EntityAdmin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\admin\EntityAdmin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityAdmin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="entity\admin\TBL_Admin.cs">
+      <DependentUpon>EntityAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\old_sales\EntityOldSales.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityOldSales.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\old_sales\EntityOldSales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityOldSales.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\old_sales\EntityOldSales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityOldSales.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="entity\old_sales\TBL_Sales_History.cs">
+      <DependentUpon>EntityOldSales.tt</DependentUpon>
+    </Compile>
     <Compile Include="firebase\dto\Check.cs" />
     <Compile Include="MainFrm.cs">
       <SubType>Form</SubType>
@@ -282,6 +318,20 @@
     <None Include="EntityBarcode.edmx.diagram">
       <DependentUpon>EntityBarcode.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="entity\admin\EntityAdmin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityAdmin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="entity\admin\EntityAdmin.edmx.diagram">
+      <DependentUpon>EntityAdmin.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="entity\old_sales\EntityOldSales.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityOldSales.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="entity\old_sales\EntityOldSales.edmx.diagram">
+      <DependentUpon>EntityOldSales.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -297,6 +347,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="entity\admin\EntityAdmin.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityAdmin.edmx</DependentUpon>
+      <LastGenOutput>EntityAdmin.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="entity\admin\EntityAdmin.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityAdmin.edmx</DependentUpon>
+      <LastGenOutput>EntityAdmin.cs</LastGenOutput>
+    </Content>
+    <Content Include="entity\old_sales\EntityOldSales.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityOldSales.edmx</DependentUpon>
+      <LastGenOutput>EntityOldSales.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="entity\old_sales\EntityOldSales.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityOldSales.edmx</DependentUpon>
+      <LastGenOutput>EntityOldSales.cs</LastGenOutput>
+    </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
