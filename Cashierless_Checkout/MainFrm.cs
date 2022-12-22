@@ -33,5 +33,12 @@ namespace Cashierless_Checkout
             this.Hide();
             chkFrm.Show();            
         }
+
+        private void lnkYntGr_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginFrm loginFrm = new LoginFrm();
+            loginFrm.Show();
+            this.Hide();
+        }
     }
 }

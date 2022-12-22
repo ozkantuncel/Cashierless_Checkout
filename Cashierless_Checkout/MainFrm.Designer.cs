@@ -29,25 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             this.customButton2 = new Cashierless_Checkout.CustomButton();
             this.customButton1 = new Cashierless_Checkout.CustomButton();
+            this.lnkYntGr = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(953, 523);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Yönetici Girişi";
             // 
             // pictureBox1
             // 
@@ -79,6 +68,7 @@
             this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton2.BorderRadius = 20;
             this.customButton2.BorderSize = 0;
+            this.customButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customButton2.FlatAppearance.BorderSize = 0;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -98,11 +88,12 @@
             // 
             // customButton1
             // 
-            this.customButton1.BackColor = System.Drawing.Color.SteelBlue;
-            this.customButton1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.customButton1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.customButton1.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton1.BorderRadius = 30;
             this.customButton1.BorderSize = 0;
+            this.customButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -116,16 +107,30 @@
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
+            // lnkYntGr
+            // 
+            this.lnkYntGr.ActiveLinkColor = System.Drawing.Color.MidnightBlue;
+            this.lnkYntGr.AutoSize = true;
+            this.lnkYntGr.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lnkYntGr.LinkColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lnkYntGr.Location = new System.Drawing.Point(939, 522);
+            this.lnkYntGr.Name = "lnkYntGr";
+            this.lnkYntGr.Size = new System.Drawing.Size(112, 19);
+            this.lnkYntGr.TabIndex = 5;
+            this.lnkYntGr.TabStop = true;
+            this.lnkYntGr.Text = "Yönetici Girişi";
+            this.lnkYntGr.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkYntGr_LinkClicked);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1063, 550);
+            this.Controls.Add(this.lnkYntGr);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.customButton2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.customButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainFrm";
@@ -141,10 +146,10 @@
         #endregion
 
         private CustomButton customButton1;
-        private System.Windows.Forms.Label label1;
         private CustomButton customButton2;
         private CustomPictureBox customPictureBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lnkYntGr;
     }
 }
 

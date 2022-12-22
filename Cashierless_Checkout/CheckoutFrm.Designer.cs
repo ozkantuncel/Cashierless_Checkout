@@ -165,31 +165,33 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(999, 395);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(507, 50);
+            this.groupBox1.Size = new System.Drawing.Size(507, 72);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
             // textBoxBarcode
             // 
-            this.textBoxBarcode.Location = new System.Drawing.Point(86, 18);
+            this.textBoxBarcode.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBoxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBarcode.Location = new System.Drawing.Point(6, 44);
             this.textBoxBarcode.Name = "textBoxBarcode";
-            this.textBoxBarcode.Size = new System.Drawing.Size(415, 22);
+            this.textBoxBarcode.Size = new System.Drawing.Size(495, 22);
             this.textBoxBarcode.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(6, 18);
+            this.label2.Location = new System.Drawing.Point(6, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 22);
+            this.label2.Size = new System.Drawing.Size(68, 22);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Barkod:";
+            this.label2.Text = "Barkod";
             // 
             // customButton3
             // 
-            this.customButton3.BackColor = System.Drawing.Color.SteelBlue;
-            this.customButton3.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.customButton3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.customButton3.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.customButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton3.BorderRadius = 22;
             this.customButton3.BorderSize = 0;
@@ -200,7 +202,7 @@
             this.customButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customButton3.Image = ((System.Drawing.Image)(resources.GetObject("customButton3.Image")));
             this.customButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton3.Location = new System.Drawing.Point(998, 460);
+            this.customButton3.Location = new System.Drawing.Point(998, 473);
             this.customButton3.Name = "customButton3";
             this.customButton3.Size = new System.Drawing.Size(247, 91);
             this.customButton3.TabIndex = 13;
@@ -212,8 +214,8 @@
             // 
             // customButton2
             // 
-            this.customButton2.BackColor = System.Drawing.Color.SteelBlue;
-            this.customButton2.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.customButton2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.customButton2.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.customButton2.BorderRadius = 22;
             this.customButton2.BorderSize = 0;
@@ -224,7 +226,7 @@
             this.customButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customButton2.Image = ((System.Drawing.Image)(resources.GetObject("customButton2.Image")));
             this.customButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton2.Location = new System.Drawing.Point(1251, 460);
+            this.customButton2.Location = new System.Drawing.Point(1251, 473);
             this.customButton2.Name = "customButton2";
             this.customButton2.Size = new System.Drawing.Size(255, 91);
             this.customButton2.TabIndex = 12;
@@ -290,8 +292,8 @@
             // 
             // odmButton
             // 
-            this.odmButton.BackColor = System.Drawing.Color.SteelBlue;
-            this.odmButton.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.odmButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.odmButton.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.odmButton.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.odmButton.BorderRadius = 30;
             this.odmButton.BorderSize = 0;
