@@ -246,11 +246,23 @@
       <DependentUpon>EntityOldSales.tt</DependentUpon>
     </Compile>
     <Compile Include="firebase\dto\Check.cs" />
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerFrm.Designer.cs">
+      <DependentUpon>ManagerFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -291,8 +303,14 @@
     <EmbeddedResource Include="CheckoutFrm.resx">
       <DependentUpon>CheckoutFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerFrm.resx">
+      <DependentUpon>ManagerFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentFrm.resx">
       <DependentUpon>PaymentFrm.cs</DependentUpon>

@@ -54,7 +54,10 @@ namespace Cashierless_Checkout
 
         private void cBtnCancel_Click(object sender, EventArgs e)
         {
-            GetData(paymenttoJson.Date.ToString());
+            countDownT.Stop();
+            this.Close();
+            CheckoutFrm checkout = new CheckoutFrm();
+            checkout.Show();
         }
 
         async void GetData(string date)
@@ -89,9 +92,10 @@ namespace Cashierless_Checkout
             int s = --sec;
             countDownLbl.Text = s.ToString();
 
-            if (sec < 0)
+            if (sec == 0)
             {
                 countDownT.Stop();
+                MessageBox.Show("Ödeme tamamlanamadı!");
             }
 
             if (sec % 5 == 0)
