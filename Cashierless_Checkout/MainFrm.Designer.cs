@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
+            System.Windows.Forms.Button BtnExit;
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             this.customButton2 = new Cashierless_Checkout.CustomButton();
             this.customButton1 = new Cashierless_Checkout.CustomButton();
             this.lnkYntGr = new System.Windows.Forms.LinkLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -47,19 +49,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.customPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(1020, 12);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customPictureBox1.TabIndex = 3;
-            this.customPictureBox1.TabStop = false;
-            this.customPictureBox1.Click += new System.EventHandler(this.customPictureBox1_Click);
             // 
             // customButton2
             // 
@@ -121,15 +110,40 @@
             this.lnkYntGr.Text = "Yönetici Girişi";
             this.lnkYntGr.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkYntGr_LinkClicked);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel4.Controls.Add(BtnExit);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1063, 39);
+            this.panel4.TabIndex = 56;
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
+            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            BtnExit.Location = new System.Drawing.Point(998, 0);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(65, 39);
+            BtnExit.TabIndex = 54;
+            BtnExit.UseVisualStyleBackColor = false;
+            BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1063, 550);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.lnkYntGr);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.customButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -137,7 +151,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,9 +161,9 @@
 
         private CustomButton customButton1;
         private CustomButton customButton2;
-        private CustomPictureBox customPictureBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnkYntGr;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

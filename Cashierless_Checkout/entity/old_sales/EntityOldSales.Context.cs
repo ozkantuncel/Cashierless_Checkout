@@ -13,10 +13,10 @@ namespace Cashierless_Checkout.entity.old_sales
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CashierlessCheckoutOldSalesEntities : DbContext
+    public partial class CashierlessCheckoutOldSalesDBEntities : DbContext
     {
-        public CashierlessCheckoutOldSalesEntities()
-            : base("name=CashierlessCheckoutOldSalesEntities")
+        public CashierlessCheckoutOldSalesDBEntities()
+            : base("name=CashierlessCheckoutOldSalesDBEntities")
         {
         }
     

@@ -21,7 +21,7 @@ namespace Cashierless_Checkout
         private string nick;
         private string pass;
         private bool checkM=false;
-        private CashierlessCheckoutAdminEntities db = new CashierlessCheckoutAdminEntities();
+        private CashierlessCheckoutAdminsDBEntities db = new CashierlessCheckoutAdminsDBEntities();
 
         private void cstbtnLogin_Click(object sender, EventArgs e)
         {
@@ -50,9 +50,8 @@ namespace Cashierless_Checkout
             }
         }
 
-        
 
-        private void customPictureBox1_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             MainFrm mainFrm = new MainFrm();
             this.Close();

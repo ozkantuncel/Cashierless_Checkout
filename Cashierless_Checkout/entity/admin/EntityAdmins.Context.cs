@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cashierless_Checkout
+namespace Cashierless_Checkout.entity.admin
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CashierlessCheckoutProductEntities : DbContext
+    public partial class CashierlessCheckoutAdminsDBEntities : DbContext
     {
-        public CashierlessCheckoutProductEntities()
-            : base("name=CashierlessCheckoutProductEntities")
+        public CashierlessCheckoutAdminsDBEntities()
+            : base("name=CashierlessCheckoutAdminsDBEntities")
         {
         }
     
@@ -25,9 +25,6 @@ namespace Cashierless_Checkout
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TBL_Category> TBL_Category { get; set; }
-        public virtual DbSet<TBL_Product> TBL_Product { get; set; }
-        public virtual DbSet<TBL_Producter> TBL_Producter { get; set; }
-        public virtual DbSet<TBL_Barcode> TBL_Barcode { get; set; }
+        public virtual DbSet<TBL_Admin> TBL_Admin { get; set; }
     }
 }

@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ff95349b06be400ea5f838a384a1f0fc" Name="Diagram1">
-        <EntityTypeShape EntityType="CashierlessCheckoutOldSalesModel.TBL_Sales_History" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="1bec64c00ddc4315b9de202bb7723f2a" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.TBL_Sales_History" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cashierless_Checkout
+namespace Cashierless_Checkout.entity.product
 {
     using System;
     using System.Collections.Generic;
@@ -27,9 +27,9 @@ namespace Cashierless_Checkout
         public int price { get; set; }
         public int tax { get; set; }
     
-        public virtual TBL_Category TBL_Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_Barcode> TBL_Barcode { get; set; }
+        public virtual TBL_Category TBL_Category { get; set; }
         public virtual TBL_Producter TBL_Producter { get; set; }
     }
 }

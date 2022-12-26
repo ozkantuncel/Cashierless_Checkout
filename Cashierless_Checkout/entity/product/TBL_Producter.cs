@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cashierless_Checkout
+namespace Cashierless_Checkout.entity.product
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TBL_Category
+    public partial class TBL_Producter
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TBL_Category()
+        public TBL_Producter()
         {
             this.TBL_Product = new HashSet<TBL_Product>();
         }
     
-        public byte id { get; set; }
-        public string CategoryName { get; set; }
+        public short id { get; set; }
+        public string producterName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBL_Product> TBL_Product { get; set; }

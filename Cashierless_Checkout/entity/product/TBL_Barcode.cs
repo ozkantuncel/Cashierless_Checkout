@@ -7,13 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cashierless_Checkout
+namespace Cashierless_Checkout.entity.product
 {
     using System;
     using System.Collections.Generic;
     
     public partial class TBL_Barcode
     {
+        public short id { get; set; }
         public string barcode { get; set; }
         public short produceID { get; set; }
     
