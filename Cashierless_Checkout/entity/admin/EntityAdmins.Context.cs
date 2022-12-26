@@ -13,10 +13,10 @@ namespace Cashierless_Checkout.entity.admin
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CashierlessCheckoutAdminEntities : DbContext
+    public partial class CashierlessCheckoutAdminsDBEntities : DbContext
     {
-        public CashierlessCheckoutAdminEntities()
-            : base("name=CashierlessCheckoutAdminEntities")
+        public CashierlessCheckoutAdminsDBEntities()
+            : base("name=CashierlessCheckoutAdminsDBEntities")
         {
         }
     

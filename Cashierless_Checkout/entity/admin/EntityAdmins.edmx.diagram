@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5d78161cfdd54ff494a06069b0e5408f" Name="Diagram1">
-        <EntityTypeShape EntityType="CashierlessCheckoutAdminModel.TBL_Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="3f01f07ba97448948d53e3c9ea76f582" Name="Diagram1">
+        <EntityTypeShape EntityType="CashierlessCheckoutAdminsDBModel.TBL_Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
