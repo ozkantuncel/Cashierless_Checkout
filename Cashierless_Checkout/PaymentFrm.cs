@@ -9,6 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cashierless_Checkout.entity.old_sales;
+using Cashierless_Checkout.entity.product;
 using Cashierless_Checkout.firebase.dto;
 using DevExpress.Utils.About;
 using Google.Cloud.Firestore;
@@ -22,8 +23,7 @@ namespace Cashierless_Checkout
     public partial class PaymentFrm : Form
     {
         private FirestoreDb database;
-        private CashierlessCheckoutOldSalesEntities db = new CashierlessCheckoutOldSalesEntities();
-        private CashierlessCheckoutProductEntities db2 = new CashierlessCheckoutProductEntities();
+        private CashierlessCheckoutOldSalesDBEntities db = new CashierlessCheckoutOldSalesDBEntities();
         private int sec = 59;
         private PaymentJson paymenttoJson;
 
@@ -74,8 +74,10 @@ namespace Cashierless_Checkout
                 for(int i = 0; i < paymenttoJson.ProductNames.Length; i++)
                 {
                     TBL_Sales_History old = new TBL_Sales_History();
-                    old.productID = paymenttoJson.ProductId[i];
-                    old.dateSales = paymenttoJson.Date;
+                    short a = paymenttoJson.ProductId[i];
+                    string b = paymenttoJson.Date; 
+                    old.productID = a;
+                    old.dateSales = b;
                     db.TBL_Sales_History.Add(old);
                     db.SaveChanges();
                 }                           

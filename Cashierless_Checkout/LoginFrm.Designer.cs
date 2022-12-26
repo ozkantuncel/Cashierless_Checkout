@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button BtnExit;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrm));
             this.pnlG = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,11 +38,27 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             this.cstbtnLogin = new Cashierless_Checkout.CustomButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
+            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            BtnExit.Location = new System.Drawing.Point(382, 0);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(53, 43);
+            BtnExit.TabIndex = 54;
+            BtnExit.UseVisualStyleBackColor = false;
+            BtnExit.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // pnlG
             // 
@@ -119,19 +136,6 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Parola";
             // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.customPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(455, 12);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customPictureBox1.TabIndex = 12;
-            this.customPictureBox1.TabStop = false;
-            this.customPictureBox1.Click += new System.EventHandler(this.customPictureBox1_Click);
-            // 
             // cstbtnLogin
             // 
             this.cstbtnLogin.BackColor = System.Drawing.Color.DodgerBlue;
@@ -152,13 +156,23 @@
             this.cstbtnLogin.UseVisualStyleBackColor = false;
             this.cstbtnLogin.Click += new System.EventHandler(this.cstbtnLogin_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel4.Controls.Add(BtnExit);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(63, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(435, 43);
+            this.panel4.TabIndex = 56;
+            // 
             // LoginFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(498, 683);
-            this.Controls.Add(this.customPictureBox1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.cstbtnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -174,7 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +205,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private CustomButton cstbtnLogin;
-        private CustomPictureBox customPictureBox1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

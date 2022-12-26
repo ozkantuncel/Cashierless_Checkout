@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cashierless_Checkout.entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,12 +34,16 @@ namespace Cashierless_Checkout
 
         private void cstbtnUrn_Click(object sender, EventArgs e)
         {
-
+            ProductManagerFrm productmanager = new ProductManagerFrm(managerN);
+            this.Close();
+            productmanager.Show();
         }
 
         private void cstbtnAddMan_Click(object sender, EventArgs e)
         {
-
+            AddManagerFrm addManagerFrm = new AddManagerFrm(managerN);
+            this.Close();
+            addManagerFrm.Show();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AForge.Video.DirectShow;
+using Cashierless_Checkout.entity.product;
 using DevExpress.Utils.About;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace Cashierless_Checkout
         private List<int> productPrice = new List<int>();
         private List<int> productTax = new List<int>();
 
-        CashierlessCheckoutProductEntities db = new CashierlessCheckoutProductEntities();
+        private CashierlessCheckoutProductDBEntities db = new CashierlessCheckoutProductDBEntities();
 
         private void CheckoutFrm_Load(object sender, EventArgs e)
         { 
@@ -226,9 +227,13 @@ namespace Cashierless_Checkout
             //NO OP
         }
 
-        private void customPictureBox1_Click(object sender, EventArgs e)
+         
+
+        private void BtnBack_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MainFrm main = new MainFrm();
+            this.Close();
+            main.Show();
         }
     }
 }

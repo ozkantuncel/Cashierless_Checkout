@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutFrm));
+            System.Windows.Forms.Button BtnExit;
             this.scannerBarcode = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.totalPriceWTaxLabel = new System.Windows.Forms.Label();
@@ -46,11 +47,12 @@
             this.customButton2 = new Cashierless_Checkout.CustomButton();
             this.customButton1 = new Cashierless_Checkout.CustomButton();
             this.urnEkleBtn = new Cashierless_Checkout.CustomButton();
-            this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             this.odmButton = new Cashierless_Checkout.CustomButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.scannerBarcode)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // scannerBarcode
@@ -278,18 +280,6 @@
             this.urnEkleBtn.UseVisualStyleBackColor = false;
             this.urnEkleBtn.Click += new System.EventHandler(this.urnEkleBtn_Click);
             // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(1475, 12);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customPictureBox1.TabIndex = 4;
-            this.customPictureBox1.TabStop = false;
-            this.customPictureBox1.Click += new System.EventHandler(this.customPictureBox1_Click);
-            // 
             // odmButton
             // 
             this.odmButton.BackColor = System.Drawing.Color.DodgerBlue;
@@ -311,12 +301,38 @@
             this.odmButton.UseVisualStyleBackColor = false;
             this.odmButton.Click += new System.EventHandler(this.odmButton_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel4.Controls.Add(BtnExit);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1518, 43);
+            this.panel4.TabIndex = 57;
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
+            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            BtnExit.Location = new System.Drawing.Point(1465, 0);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(53, 43);
+            BtnExit.TabIndex = 54;
+            BtnExit.UseVisualStyleBackColor = false;
+            BtnExit.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
             // CheckoutFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1518, 707);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.totalPLabel);
@@ -330,7 +346,6 @@
             this.Controls.Add(this.totalPriceWTaxLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.urnEkleBtn);
-            this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.listScanner);
             this.Controls.Add(this.scannerBarcode);
             this.Controls.Add(this.odmButton);
@@ -344,7 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.scannerBarcode)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +369,6 @@
 
         private CustomButton odmButton;
         private System.Windows.Forms.PictureBox scannerBarcode;
-        private CustomPictureBox customPictureBox1;
         private CustomButton urnEkleBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label totalPriceWTaxLabel;
@@ -371,5 +385,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxBarcode;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
