@@ -35,8 +35,8 @@ namespace Cashierless_Checkout
         private void cstbtnUrn_Click(object sender, EventArgs e)
         {
             ProductManagerFrm productmanager = new ProductManagerFrm(managerN);
-            this.Close();
-            productmanager.Show();
+            Close();
+            productmanager.ShowDialog();
         }
 
         private void cstbtnAddMan_Click(object sender, EventArgs e)

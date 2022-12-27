@@ -30,8 +30,9 @@ namespace Cashierless_Checkout
         private void customButton1_Click(object sender, EventArgs e)
         {
             CheckoutFrm chkFrm = new CheckoutFrm();
+            chkFrm.Show();
             this.Hide();
-            chkFrm.Show();            
+           
         }
 
         private void lnkYntGr_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

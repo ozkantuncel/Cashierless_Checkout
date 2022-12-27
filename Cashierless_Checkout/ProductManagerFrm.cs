@@ -81,8 +81,8 @@ namespace Cashierless_Checkout.entity
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            ManagerFrm manager = new ManagerFrm("dd");
-            this.Close();
+            ManagerFrm manager = new ManagerFrm(managerName);
+            Close();
             manager.Show();
         }
     }

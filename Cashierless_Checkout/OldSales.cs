@@ -37,7 +37,7 @@ namespace Cashierless_Checkout
         {
             InitializeComponent();
         }
-
+       
         private CashierlessCheckoutProductDBEntities dbProduct = new CashierlessCheckoutProductDBEntities();
         private CashierlessCheckoutOldSalesDBEntities dbOldSales = new CashierlessCheckoutOldSalesDBEntities();
 
@@ -111,12 +111,9 @@ namespace Cashierless_Checkout
                         producCategory = tblProduct.TBL_Product.TBL_Category.CategoryName;
                         price = tblProduct.TBL_Product.price.ToString();
                         tax = tblProduct.TBL_Product.tax.ToString();
-                        string[] ls = { barcode, productName, producerName, producCategory, price, tax, dateSales };
-                        OldSalesListAdItem(ls);
-
                     }
-
-
+                    string[] ls = { barcode, productName, producerName, producCategory, price, tax, dateSales };
+                    OldSalesListAdItem(ls);
                     //var tblProduct = dbProduct.TBL_Barcode.Find(a.productID);
 
                 }

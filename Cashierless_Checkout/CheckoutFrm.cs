@@ -1,6 +1,5 @@
 ﻿using AForge.Video.DirectShow;
 using Cashierless_Checkout.entity.product;
-using DevExpress.Utils.About;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,12 +27,13 @@ namespace Cashierless_Checkout
         
         private FilterInfoCollection Cameras;
         private VideoCaptureDevice camera;
+        private byte seleCmbCameras =0;
 
         private bool isSca = true;
         private double totalPrice=0;
         private double totalTax = 0;
         private double totalPriceWTax = 0;
-        private List<short> productId = new List<short>(); 
+        private List<short> barcodeId = new List<short>(); 
         private List<String> productNames = new List<String>();
         private List<String> producterNames = new List<String>();
         private List<int> productPrice = new List<int>();
@@ -46,7 +46,14 @@ namespace Cashierless_Checkout
             ScannerListMaker();
             Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
-            camera = new VideoCaptureDevice(Cameras[2].MonikerString);//0 Phone 2 PC
+
+            foreach (FilterInfo i in Cameras)
+            {
+                CmbCameres.Items.Add(i.Name);
+            }
+            CmbCameres.SelectedIndex = seleCmbCameras;
+
+            camera = new VideoCaptureDevice(Cameras[CmbCameres.SelectedIndex].MonikerString);//0 Phone 2 PC
 
             camera.NewFrame += VideoCaptureDevice_NewFrame;
             camera.Start();
@@ -97,7 +104,7 @@ namespace Cashierless_Checkout
                 fiyat = a.TBL_Product.price.ToString();
                 vergi = a.TBL_Product.tax.ToString();
 
-                productId.Add(a.TBL_Product.id);
+                barcodeId.Add(a.id);
 
                 productNames.Add(urnN);
                 producterNames.Add(urterN);
@@ -164,7 +171,7 @@ namespace Cashierless_Checkout
                 var paymenttoJson = new PaymentJson()
                 {
                     Date = date,
-                    ProductId = productId.ToArray(),
+                    ProductId = barcodeId.ToArray(),
                     ProductNames = productNames.ToArray(),
                     ProducerNames = producterNames.ToArray(),
                     ProductTotalPrice = productPrice.ToArray(),
@@ -231,9 +238,26 @@ namespace Cashierless_Checkout
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            MainFrm main = new MainFrm();
-            this.Close();
+            MainFrm main = new MainFrm();           
             main.Show();
+            Close();
+        }
+
+        
+
+        private void BtnCameras_Click(object sender, EventArgs e)
+        {
+            if (camera != null)
+            {
+                if (camera.IsRunning)
+                {
+                    camera.Stop();
+                }
+            }
+            camera = new VideoCaptureDevice(Cameras[CmbCameres.SelectedIndex].MonikerString);//0 Phone 2 PC
+
+            camera.NewFrame += VideoCaptureDevice_NewFrame;
+            camera.Start();
         }
     }
 }

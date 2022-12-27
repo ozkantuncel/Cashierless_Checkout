@@ -11,12 +11,10 @@ using System.Windows.Forms;
 using Cashierless_Checkout.entity.old_sales;
 using Cashierless_Checkout.entity.product;
 using Cashierless_Checkout.firebase.dto;
-using DevExpress.Utils.About;
 using Google.Cloud.Firestore;
 using Google.Cloud.Firestore.V1;
 using MessagingToolkit.QRCode.Codec;
 using ZXing.QrCode.Internal;
-using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 
 namespace Cashierless_Checkout
 {
@@ -35,21 +33,28 @@ namespace Cashierless_Checkout
 
         private void PaymentFrm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
 
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonToString = JsonSerializer.Serialize(paymenttoJson, options);
+                QRCodeEncoder deQr = new QRCodeEncoder();
+                pictrboxQR.Image = deQr.Encode(jsonToString);
+                lblTotalP.Text = paymenttoJson.TotalPrice.ToString() + "₺";
 
-            QRCodeEncoder deQr = new QRCodeEncoder();
-            pictrboxQR.Image = deQr.Encode(jsonToString);
-            lblTotalP.Text = paymenttoJson.TotalPrice.ToString()+ "₺";
+                string path = AppDomain.CurrentDomain.BaseDirectory + @"cashierless-checkout.json";
+                Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path);
 
-            string path = AppDomain.CurrentDomain.BaseDirectory + @"cashierless-checkout.json";
-            Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", path);
+                database = FirestoreDb.Create("cashierless-checkout");
 
-            database = FirestoreDb.Create("cashierless-checkout");
-
-            countDownT.Start();
-            countDownT.Interval = 1000;
+                countDownT.Start();
+                countDownT.Interval = 1000;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+                                   
         }
 
         private void cBtnCancel_Click(object sender, EventArgs e)

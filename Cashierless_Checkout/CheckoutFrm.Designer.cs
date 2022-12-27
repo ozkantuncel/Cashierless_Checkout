@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutFrm));
             System.Windows.Forms.Button BtnExit;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutFrm));
             this.scannerBarcode = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.totalPriceWTaxLabel = new System.Windows.Forms.Label();
@@ -49,11 +49,28 @@
             this.urnEkleBtn = new Cashierless_Checkout.CustomButton();
             this.odmButton = new Cashierless_Checkout.CustomButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.CmbCameres = new System.Windows.Forms.ComboBox();
+            this.BtnCameras = new Cashierless_Checkout.CustomButton();
             BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.scannerBarcode)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
+            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            BtnExit.Location = new System.Drawing.Point(1465, 0);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(53, 43);
+            BtnExit.TabIndex = 54;
+            BtnExit.UseVisualStyleBackColor = false;
+            BtnExit.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // scannerBarcode
             // 
@@ -311,20 +328,34 @@
             this.panel4.Size = new System.Drawing.Size(1518, 43);
             this.panel4.TabIndex = 57;
             // 
-            // BtnExit
+            // CmbCameres
             // 
-            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
-            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            BtnExit.FlatAppearance.BorderSize = 0;
-            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            BtnExit.Location = new System.Drawing.Point(1465, 0);
-            BtnExit.Name = "BtnExit";
-            BtnExit.Size = new System.Drawing.Size(53, 43);
-            BtnExit.TabIndex = 54;
-            BtnExit.UseVisualStyleBackColor = false;
-            BtnExit.Click += new System.EventHandler(this.BtnBack_Click);
+            this.CmbCameres.FormattingEnabled = true;
+            this.CmbCameres.Location = new System.Drawing.Point(212, 575);
+            this.CmbCameres.Name = "CmbCameres";
+            this.CmbCameres.Size = new System.Drawing.Size(142, 24);
+            this.CmbCameres.TabIndex = 58;
+            // 
+            // BtnCameras
+            // 
+            this.BtnCameras.BackColor = System.Drawing.Color.Azure;
+            this.BtnCameras.BackgroundColor = System.Drawing.Color.Azure;
+            this.BtnCameras.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnCameras.BorderRadius = 17;
+            this.BtnCameras.BorderSize = 0;
+            this.BtnCameras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCameras.FlatAppearance.BorderSize = 0;
+            this.BtnCameras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCameras.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnCameras.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnCameras.Location = new System.Drawing.Point(198, 617);
+            this.BtnCameras.Name = "BtnCameras";
+            this.BtnCameras.Size = new System.Drawing.Size(186, 48);
+            this.BtnCameras.TabIndex = 59;
+            this.BtnCameras.Text = "Kamera seç";
+            this.BtnCameras.TextColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnCameras.UseVisualStyleBackColor = false;
+            this.BtnCameras.Click += new System.EventHandler(this.BtnCameras_Click);
             // 
             // CheckoutFrm
             // 
@@ -332,6 +363,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1518, 707);
+            this.Controls.Add(this.BtnCameras);
+            this.Controls.Add(this.CmbCameres);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
@@ -386,5 +419,7 @@
         private System.Windows.Forms.TextBox textBoxBarcode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox CmbCameres;
+        private CustomButton BtnCameras;
     }
 }
