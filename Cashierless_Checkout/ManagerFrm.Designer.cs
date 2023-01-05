@@ -32,8 +32,8 @@
             this.cstbtnUrn = new Cashierless_Checkout.CustomButton();
             this.cstbtnAddMan = new Cashierless_Checkout.CustomButton();
             this.pnlMan = new System.Windows.Forms.Panel();
-            this.lblHsg = new System.Windows.Forms.Label();
             this.lnkCks = new System.Windows.Forms.LinkLabel();
+            this.lblHsg = new System.Windows.Forms.Label();
             this.pnlMan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,16 +96,6 @@
             this.pnlMan.Size = new System.Drawing.Size(800, 116);
             this.pnlMan.TabIndex = 16;
             // 
-            // lblHsg
-            // 
-            this.lblHsg.AutoSize = true;
-            this.lblHsg.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHsg.Location = new System.Drawing.Point(293, 38);
-            this.lblHsg.Name = "lblHsg";
-            this.lblHsg.Size = new System.Drawing.Size(235, 34);
-            this.lblHsg.TabIndex = 0;
-            this.lblHsg.Text = "Hoşgeldiniz admin";
-            // 
             // lnkCks
             // 
             this.lnkCks.AutoSize = true;
@@ -119,6 +109,16 @@
             this.lnkCks.Text = "Çıkış Yap";
             this.lnkCks.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCks_LinkClicked);
             // 
+            // lblHsg
+            // 
+            this.lblHsg.AutoSize = true;
+            this.lblHsg.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHsg.Location = new System.Drawing.Point(293, 38);
+            this.lblHsg.Name = "lblHsg";
+            this.lblHsg.Size = new System.Drawing.Size(235, 34);
+            this.lblHsg.TabIndex = 0;
+            this.lblHsg.Text = "Hoşgeldiniz admin";
+            // 
             // ManagerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,6 +129,7 @@
             this.Controls.Add(this.cstbtnAddMan);
             this.Controls.Add(this.cstbtnUrn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerFrm";

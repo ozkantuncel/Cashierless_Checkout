@@ -1,7 +1,6 @@
 ﻿using Cashierless_Checkout.entity;
 using Cashierless_Checkout.entity.old_sales;
 using Cashierless_Checkout.entity.product;
-using DevExpress.ClipboardSource.SpreadsheetML;
 using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
@@ -88,6 +87,7 @@ namespace Cashierless_Checkout
 
         private void OldSales_Load(object sender, EventArgs e)
         {
+            ListOldSales.Items.Clear();
             AddListProduct();
         }
 

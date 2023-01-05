@@ -83,9 +83,10 @@
             // 
             this.txtNick.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtNick.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNick.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtNick.Location = new System.Drawing.Point(86, 323);
             this.txtNick.Name = "txtNick";
-            this.txtNick.Size = new System.Drawing.Size(356, 15);
+            this.txtNick.Size = new System.Drawing.Size(356, 21);
             this.txtNick.TabIndex = 3;
             // 
             // panel1
@@ -108,10 +109,11 @@
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPass.Location = new System.Drawing.Point(86, 449);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(356, 15);
+            this.txtPass.Size = new System.Drawing.Size(356, 21);
             this.txtPass.TabIndex = 6;
             // 
             // label2
@@ -184,6 +186,7 @@
             this.Controls.Add(this.pnlG);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";

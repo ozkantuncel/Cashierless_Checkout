@@ -12,6 +12,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace Cashierless_Checkout
 {
@@ -43,20 +45,31 @@ namespace Cashierless_Checkout
 
         private void CheckoutFrm_Load(object sender, EventArgs e)
         { 
-            ScannerListMaker();
-            Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-
-
-            foreach (FilterInfo i in Cameras)
+            try
             {
-                CmbCameres.Items.Add(i.Name);
+                ScannerListMaker();
+                Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+
+                foreach (FilterInfo i in Cameras)
+                {
+                    CmbCameres.Items.Add(i.Name);
+                }
+                CmbCameres.SelectedIndex = seleCmbCameras;
+
+                camera = new VideoCaptureDevice(Cameras[CmbCameres.SelectedIndex].MonikerString);//0 Phone 2 PC
+
+                camera.NewFrame += VideoCaptureDevice_NewFrame;
+                camera.Start();
             }
-            CmbCameres.SelectedIndex = seleCmbCameras;
-
-            camera = new VideoCaptureDevice(Cameras[CmbCameres.SelectedIndex].MonikerString);//0 Phone 2 PC
-
-            camera.NewFrame += VideoCaptureDevice_NewFrame;
-            camera.Start();
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MainFrm mainFrm = new MainFrm();
+                mainFrm.Show();
+                this.Close();
+            }
+            
         }
 
         private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
@@ -165,29 +178,50 @@ namespace Cashierless_Checkout
 
         private void odmButton_Click(object sender, EventArgs e)
         {
-            if(totalPrice != 0)
+            if (CheckConnetionNet())
             {
-                string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm").Replace(" ", "");
-                var paymenttoJson = new PaymentJson()
+                if (totalPrice != 0)
                 {
-                    Date = date,
-                    ProductId = barcodeId.ToArray(),
-                    ProductNames = productNames.ToArray(),
-                    ProducerNames = producterNames.ToArray(),
-                    ProductTotalPrice = productPrice.ToArray(),
-                    ProductTax = productTax.ToArray(),
-                    TotalPrice = Convert.ToInt32(totalPriceWTaxLabel.Text)
-                };
-                PaymentFrm paymentFrm = new PaymentFrm(paymenttoJson);
-                paymentFrm.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Lütfen barkodu okutun");
+                    string date = DateTime.Now.ToString("MM/dd/yyyy HH:mm").Replace(" ", "");
+                    var paymenttoJson = new PaymentJson()
+                    {
+                        Date = date,
+                        ProductId = barcodeId.ToArray(),
+                        ProductNames = productNames.ToArray(),
+                        ProducerNames = producterNames.ToArray(),
+                        ProductTotalPrice = productPrice.ToArray(),
+                        ProductTax = productTax.ToArray(),
+                        TotalPrice = Convert.ToInt32(totalPriceWTaxLabel.Text)
+                    };
+                    PaymentFrm paymentFrm = new PaymentFrm(paymenttoJson);
+                    paymentFrm.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen barkodu okutun", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
+                }
             }
             
+            
         }
+
+        private bool CheckConnetionNet()
+        {
+            try
+            {
+                System.Net.Sockets.TcpClient contol_client = new System.Net.Sockets.TcpClient("www.google.com.tr", 80);
+                contol_client.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
 
         private void urnEkleBtn_Click(object sender, EventArgs e)
         {
@@ -199,9 +233,17 @@ namespace Cashierless_Checkout
         {
             if(textBoxBarcode.Text != "")
             {
-                string scr = textBoxBarcode.Text;
-                AddListBarcodeScanner(scr);
-                textBoxBarcode.Text = "";
+                try
+                {
+                    string scr = textBoxBarcode.Text;
+                    AddListBarcodeScanner(scr);
+                    textBoxBarcode.Text = "";
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
 

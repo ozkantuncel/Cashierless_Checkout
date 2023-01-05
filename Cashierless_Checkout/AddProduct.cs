@@ -72,7 +72,7 @@ namespace Cashierless_Checkout.entity
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
- 
+            listProduct.Items.Clear();
             AddListProduct();
         }
 
@@ -94,7 +94,7 @@ namespace Cashierless_Checkout.entity
             string totalP = txtTotalP.Text;
             string taxP = txtPTax.Text;
             
-            if(!bar.Equals("") && !prd.Equals("") && !totalP.Equals("") && !taxP.Equals(""))
+            if(!bar.Equals("") && !prd.Equals("") && !totalP.Equals("") && !taxP.Equals("")&& !totalP.StartsWith("-") && !taxP.StartsWith("-"))
             {
                 try
                 {
@@ -137,9 +137,12 @@ namespace Cashierless_Checkout.entity
                         a = Convert.ToByte(cmbCat.SelectedValue);
                     }
 
+                    double dblTo = Convert.ToDouble(totalP);
+                    double dblTax = Convert.ToDouble(taxP);
+
                     productTBL.productName = prd;
-                    productTBL.price = Convert.ToInt32(totalP);
-                    productTBL.tax = Convert.ToInt32(taxP);
+                    productTBL.price = Convert.ToInt32(Math.Floor(dblTo));
+                    productTBL.tax = Convert.ToInt32(Math.Floor(dblTax));
                     productTBL.categoryID = a;
                     productTBL.producerID = b;
                     db.TBL_Product.Add(productTBL);
@@ -157,16 +160,20 @@ namespace Cashierless_Checkout.entity
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
+
                     ClearTextView();
+                    listProduct.Items.Clear();
+                    AddListProduct();
                 }
             }
             else
             {
-                MessageBox.Show("Eksik değerleri giriniz");
+                MessageBox.Show("Lütfen değerleri doğtu giriniz");
+                ClearTextView();
             }                    
         }
 
@@ -193,11 +200,13 @@ namespace Cashierless_Checkout.entity
                 db.SaveChanges();
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 ClearTextView();
+                listProduct.Items.Clear();
+                AddListProduct();
             }
 
         }
@@ -223,6 +232,7 @@ namespace Cashierless_Checkout.entity
                     price = a.TBL_Product.price.ToString();
                     tax = a.TBL_Product.tax.ToString();
                     string[] ls = {barcodeID.ToString(),barcode, productName, producerName, producCategory, price, tax };
+                   
                     ProductListAdItem(ls);
                     
 
@@ -233,7 +243,7 @@ namespace Cashierless_Checkout.entity
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

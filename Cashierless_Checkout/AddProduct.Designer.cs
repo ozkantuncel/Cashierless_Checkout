@@ -51,10 +51,6 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.BtnGnrcBrcode = new System.Windows.Forms.Button();
             this.listProduct = new System.Windows.Forms.ListView();
-            this.CstbtnLst = new Cashierless_Checkout.CustomButton();
-            this.CstbtnChangeP = new Cashierless_Checkout.CustomButton();
-            this.CstbtnDellP = new Cashierless_Checkout.CustomButton();
-            this.CstBtnAddP = new Cashierless_Checkout.CustomButton();
             this.İD = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Barkod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ürün = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,10 +58,15 @@
             this.Kategori = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Fiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Vergi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CstbtnLst = new Cashierless_Checkout.CustomButton();
+            this.CstbtnChangeP = new Cashierless_Checkout.CustomButton();
+            this.CstbtnDellP = new Cashierless_Checkout.CustomButton();
+            this.CstBtnAddP = new Cashierless_Checkout.CustomButton();
             this.SuspendLayout();
             // 
             // cmbCat
             // 
+            this.cmbCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbCat.FormattingEnabled = true;
@@ -97,9 +98,10 @@
             // 
             this.txtPName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPName.Location = new System.Drawing.Point(18, 144);
             this.txtPName.Name = "txtPName";
-            this.txtPName.Size = new System.Drawing.Size(356, 15);
+            this.txtPName.Size = new System.Drawing.Size(356, 21);
             this.txtPName.TabIndex = 28;
             // 
             // label3
@@ -125,9 +127,10 @@
             // 
             this.txtPCat.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPCat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPCat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPCat.Location = new System.Drawing.Point(18, 301);
             this.txtPCat.Name = "txtPCat";
-            this.txtPCat.Size = new System.Drawing.Size(198, 15);
+            this.txtPCat.Size = new System.Drawing.Size(198, 21);
             this.txtPCat.TabIndex = 34;
             // 
             // label1
@@ -153,13 +156,15 @@
             // 
             this.txtProducer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtProducer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProducer.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtProducer.Location = new System.Drawing.Point(18, 221);
             this.txtProducer.Name = "txtProducer";
-            this.txtProducer.Size = new System.Drawing.Size(198, 15);
+            this.txtProducer.Size = new System.Drawing.Size(198, 21);
             this.txtProducer.TabIndex = 38;
             // 
             // cmbProducer
             // 
+            this.cmbProducer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProducer.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbProducer.FormattingEnabled = true;
@@ -191,9 +196,10 @@
             // 
             this.txtTotalP.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTotalP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotalP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTotalP.Location = new System.Drawing.Point(18, 375);
             this.txtTotalP.Name = "txtTotalP";
-            this.txtTotalP.Size = new System.Drawing.Size(356, 15);
+            this.txtTotalP.Size = new System.Drawing.Size(356, 21);
             this.txtTotalP.TabIndex = 41;
             // 
             // label5
@@ -219,9 +225,10 @@
             // 
             this.txtPTax.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPTax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPTax.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPTax.Location = new System.Drawing.Point(18, 443);
             this.txtPTax.Name = "txtPTax";
-            this.txtPTax.Size = new System.Drawing.Size(356, 15);
+            this.txtPTax.Size = new System.Drawing.Size(356, 21);
             this.txtPTax.TabIndex = 44;
             // 
             // label6
@@ -248,9 +255,10 @@
             this.txtBarcode.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtBarcode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBarcode.Enabled = false;
+            this.txtBarcode.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarcode.Location = new System.Drawing.Point(18, 70);
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(290, 15);
+            this.txtBarcode.Size = new System.Drawing.Size(290, 21);
             this.txtBarcode.TabIndex = 50;
             // 
             // BtnGnrcBrcode
@@ -288,6 +296,41 @@
             this.listProduct.UseCompatibleStateImageBehavior = false;
             this.listProduct.View = System.Windows.Forms.View.Details;
             this.listProduct.DoubleClick += new System.EventHandler(this.listProduct_DoubleClick);
+            // 
+            // İD
+            // 
+            this.İD.Text = "İD";
+            this.İD.Width = 50;
+            // 
+            // Barkod
+            // 
+            this.Barkod.Text = "Barkod";
+            this.Barkod.Width = 125;
+            // 
+            // Ürün
+            // 
+            this.Ürün.Text = "Ürün";
+            this.Ürün.Width = 175;
+            // 
+            // Üretici
+            // 
+            this.Üretici.Text = "Üretici";
+            this.Üretici.Width = 135;
+            // 
+            // Kategori
+            // 
+            this.Kategori.Text = "Kategori";
+            this.Kategori.Width = 80;
+            // 
+            // Fiyat
+            // 
+            this.Fiyat.Text = "Fiyat";
+            this.Fiyat.Width = 63;
+            // 
+            // Vergi
+            // 
+            this.Vergi.Text = "Vergi";
+            this.Vergi.Width = 63;
             // 
             // CstbtnLst
             // 
@@ -372,41 +415,6 @@
             this.CstBtnAddP.TextColor = System.Drawing.Color.Black;
             this.CstBtnAddP.UseVisualStyleBackColor = false;
             this.CstBtnAddP.Click += new System.EventHandler(this.CstBtnAddP_Click);
-            // 
-            // İD
-            // 
-            this.İD.Text = "İD";
-            this.İD.Width = 50;
-            // 
-            // Barkod
-            // 
-            this.Barkod.Text = "Barkod";
-            this.Barkod.Width = 125;
-            // 
-            // Ürün
-            // 
-            this.Ürün.Text = "Ürün";
-            this.Ürün.Width = 175;
-            // 
-            // Üretici
-            // 
-            this.Üretici.Text = "Üretici";
-            this.Üretici.Width = 135;
-            // 
-            // Kategori
-            // 
-            this.Kategori.Text = "Kategori";
-            this.Kategori.Width = 80;
-            // 
-            // Fiyat
-            // 
-            this.Fiyat.Text = "Fiyat";
-            this.Fiyat.Width = 63;
-            // 
-            // Vergi
-            // 
-            this.Vergi.Text = "Vergi";
-            this.Vergi.Width = 63;
             // 
             // AddProduct
             // 

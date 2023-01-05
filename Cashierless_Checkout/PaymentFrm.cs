@@ -52,7 +52,7 @@ namespace Cashierless_Checkout
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
                                    
         }

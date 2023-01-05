@@ -39,9 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             this.pictureB = new System.Windows.Forms.PictureBox();
             this.pnlUser = new System.Windows.Forms.Panel();
-            this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
             BtnExit = new System.Windows.Forms.Button();
             BtnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -49,10 +49,39 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB)).BeginInit();
             this.pnlUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
+            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnExit.FlatAppearance.BorderSize = 0;
+            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            BtnExit.Location = new System.Drawing.Point(736, 0);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(53, 43);
+            BtnExit.TabIndex = 54;
+            BtnExit.UseVisualStyleBackColor = false;
+            BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // BtnBack
+            // 
+            BtnBack.BackColor = System.Drawing.Color.SeaGreen;
+            BtnBack.FlatAppearance.BorderSize = 0;
+            BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
+            BtnBack.Location = new System.Drawing.Point(3, 3);
+            BtnBack.Name = "BtnBack";
+            BtnBack.Size = new System.Drawing.Size(52, 43);
+            BtnBack.TabIndex = 56;
+            BtnBack.UseVisualStyleBackColor = false;
+            BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // panel1
             // 
@@ -75,21 +104,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(789, 43);
             this.panel4.TabIndex = 55;
-            // 
-            // BtnExit
-            // 
-            BtnExit.BackColor = System.Drawing.Color.SeaGreen;
-            BtnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            BtnExit.FlatAppearance.BorderSize = 0;
-            BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            BtnExit.Location = new System.Drawing.Point(736, 0);
-            BtnExit.Name = "BtnExit";
-            BtnExit.Size = new System.Drawing.Size(53, 43);
-            BtnExit.TabIndex = 54;
-            BtnExit.UseVisualStyleBackColor = false;
-            BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnOldSales
             // 
@@ -168,6 +182,18 @@
             this.panel3.Size = new System.Drawing.Size(70, 656);
             this.panel3.TabIndex = 1;
             // 
+            // customPictureBox1
+            // 
+            this.customPictureBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.customPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
+            this.customPictureBox1.Location = new System.Drawing.Point(983, 12);
+            this.customPictureBox1.Name = "customPictureBox1";
+            this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
+            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.customPictureBox1.TabIndex = 4;
+            this.customPictureBox1.TabStop = false;
+            // 
             // pictureB
             // 
             this.pictureB.Image = ((System.Drawing.Image)(resources.GetObject("pictureB.Image")));
@@ -187,32 +213,6 @@
             this.pnlUser.Size = new System.Drawing.Size(1420, 656);
             this.pnlUser.TabIndex = 3;
             // 
-            // BtnBack
-            // 
-            BtnBack.BackColor = System.Drawing.Color.SeaGreen;
-            BtnBack.FlatAppearance.BorderSize = 0;
-            BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
-            BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
-            BtnBack.Location = new System.Drawing.Point(3, 3);
-            BtnBack.Name = "BtnBack";
-            BtnBack.Size = new System.Drawing.Size(52, 43);
-            BtnBack.TabIndex = 56;
-            BtnBack.UseVisualStyleBackColor = false;
-            BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BackColor = System.Drawing.Color.SeaGreen;
-            this.customPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(983, 12);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(31, 26);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customPictureBox1.TabIndex = 4;
-            this.customPictureBox1.TabStop = false;
-            // 
             // ProductManagerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +223,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductManagerFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductManagerFrm";
@@ -233,9 +234,9 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB)).EndInit();
             this.pnlUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

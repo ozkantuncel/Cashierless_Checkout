@@ -1,6 +1,5 @@
 ﻿using Cashierless_Checkout.entity.admin;
 using Cashierless_Checkout.entity.old_sales;
-using DevExpress.Utils.About;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +28,16 @@ namespace Cashierless_Checkout
 
         private void AddManagerFrm_Load(object sender, EventArgs e)
         {
-            ManagerListMaker();
-            AddListManager();
+            try
+            {
+                ManagerListMaker();
+                AddListManager();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
      
         }
 
@@ -112,7 +119,7 @@ namespace Cashierless_Checkout
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     }
 
@@ -121,7 +128,8 @@ namespace Cashierless_Checkout
             }
             else
             {
-                MessageBox.Show("Tüm yöneticiler silinemez");
+                 
+                MessageBox.Show("Tüm yöneticiler silinemez", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -148,22 +156,28 @@ namespace Cashierless_Checkout
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
-                        
+                        MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                 }
                 else
                 {
-                    MessageBox.Show("");
+                    MessageBox.Show("", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Lütfen alanlarını doldurunuz");
+                MessageBox.Show("Lütfen alanlarını doldurunuz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 
             }
         }
 
         private void CstPboxEx_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             ManagerFrm manager = new ManagerFrm(managerA);
             this.Hide();

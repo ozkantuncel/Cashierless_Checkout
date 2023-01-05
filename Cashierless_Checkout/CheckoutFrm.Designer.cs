@@ -192,9 +192,10 @@
             // 
             this.textBoxBarcode.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textBoxBarcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBarcode.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBoxBarcode.Location = new System.Drawing.Point(6, 44);
             this.textBoxBarcode.Name = "textBoxBarcode";
-            this.textBoxBarcode.Size = new System.Drawing.Size(495, 22);
+            this.textBoxBarcode.Size = new System.Drawing.Size(495, 28);
             this.textBoxBarcode.TabIndex = 9;
             // 
             // label2
@@ -330,6 +331,7 @@
             // 
             // CmbCameres
             // 
+            this.CmbCameres.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCameres.FormattingEnabled = true;
             this.CmbCameres.Location = new System.Drawing.Point(212, 575);
             this.CmbCameres.Name = "CmbCameres";
@@ -384,6 +386,7 @@
             this.Controls.Add(this.odmButton);
             this.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckoutFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckoutFrm";

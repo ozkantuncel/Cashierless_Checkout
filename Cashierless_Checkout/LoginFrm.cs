@@ -44,7 +44,8 @@ namespace Cashierless_Checkout
 
                 if (!checkM)
                 {
-                    MessageBox.Show("Bilgileriniz yanlış");
+                    MessageBox.Show("Bilgileriniz yanlış", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
                  
             }

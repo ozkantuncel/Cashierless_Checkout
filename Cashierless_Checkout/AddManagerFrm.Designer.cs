@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button BtnBack;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddManagerFrm));
             this.CstbtnDelManager = new Cashierless_Checkout.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,17 +41,33 @@
             this.pnlG = new System.Windows.Forms.Panel();
             this.listAdmin = new System.Windows.Forms.ListView();
             this.CstBtnAddManager = new Cashierless_Checkout.CustomButton();
-            this.CstPboxEx = new Cashierless_Checkout.CustomPictureBox();
             this.btnGnrcPass = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPass2 = new System.Windows.Forms.TextBox();
             this.customPictureBox1 = new Cashierless_Checkout.CustomPictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            BtnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CstPboxEx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BtnBack
+            // 
+            BtnBack.BackColor = System.Drawing.Color.SeaGreen;
+            BtnBack.Dock = System.Windows.Forms.DockStyle.Right;
+            BtnBack.FlatAppearance.BorderSize = 0;
+            BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
+            BtnBack.Location = new System.Drawing.Point(884, 0);
+            BtnBack.Name = "BtnBack";
+            BtnBack.Size = new System.Drawing.Size(53, 43);
+            BtnBack.TabIndex = 54;
+            BtnBack.UseVisualStyleBackColor = false;
+            BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // CstbtnDelManager
             // 
@@ -108,10 +125,11 @@
             this.txtPass.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Enabled = false;
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPass.Location = new System.Drawing.Point(93, 364);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(356, 15);
+            this.txtPass.Size = new System.Drawing.Size(356, 21);
             this.txtPass.TabIndex = 17;
             // 
             // panel1
@@ -126,9 +144,10 @@
             // 
             this.txtNick.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtNick.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNick.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtNick.Location = new System.Drawing.Point(93, 278);
             this.txtNick.Name = "txtNick";
-            this.txtNick.Size = new System.Drawing.Size(356, 15);
+            this.txtNick.Size = new System.Drawing.Size(356, 21);
             this.txtNick.TabIndex = 15;
             // 
             // pictureBox1
@@ -185,19 +204,6 @@
             this.CstBtnAddManager.UseVisualStyleBackColor = false;
             this.CstBtnAddManager.Click += new System.EventHandler(this.CstBtnAddManager_Click);
             // 
-            // CstPboxEx
-            // 
-            this.CstPboxEx.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.CstPboxEx.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CstPboxEx.Image = ((System.Drawing.Image)(resources.GetObject("CstPboxEx.Image")));
-            this.CstPboxEx.Location = new System.Drawing.Point(957, 12);
-            this.CstPboxEx.Name = "CstPboxEx";
-            this.CstPboxEx.Size = new System.Drawing.Size(31, 26);
-            this.CstPboxEx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CstPboxEx.TabIndex = 27;
-            this.CstPboxEx.TabStop = false;
-            this.CstPboxEx.Click += new System.EventHandler(this.CstPboxEx_Click);
-            // 
             // btnGnrcPass
             // 
             this.btnGnrcPass.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -216,7 +222,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(413, 9);
+            this.label1.Location = new System.Drawing.Point(398, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 26);
             this.label1.TabIndex = 30;
@@ -246,10 +252,11 @@
             this.txtPass2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtPass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass2.Enabled = false;
+            this.txtPass2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPass2.Location = new System.Drawing.Point(93, 439);
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.PasswordChar = '*';
-            this.txtPass2.Size = new System.Drawing.Size(356, 15);
+            this.txtPass2.Size = new System.Drawing.Size(356, 21);
             this.txtPass2.TabIndex = 31;
             // 
             // customPictureBox1
@@ -264,19 +271,29 @@
             this.customPictureBox1.TabIndex = 22;
             this.customPictureBox1.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel4.Controls.Add(BtnBack);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(63, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(937, 43);
+            this.panel4.TabIndex = 58;
+            // 
             // AddManagerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 630);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtPass2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGnrcPass);
             this.Controls.Add(this.CstBtnAddManager);
-            this.Controls.Add(this.CstPboxEx);
             this.Controls.Add(this.listAdmin);
             this.Controls.Add(this.customPictureBox1);
             this.Controls.Add(this.CstbtnDelManager);
@@ -289,12 +306,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddManagerFrm";
             this.Text = "AddManagerFrm";
             this.Load += new System.EventHandler(this.AddManagerFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CstPboxEx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,12 +331,12 @@
         private System.Windows.Forms.Panel pnlG;
         private System.Windows.Forms.ListView listAdmin;
         private CustomButton CstBtnAddManager;
-        private CustomPictureBox CstPboxEx;
         private System.Windows.Forms.Button btnGnrcPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtPass2;
         private CustomPictureBox customPictureBox1;
+        private System.Windows.Forms.Panel panel4;
     }
 }
