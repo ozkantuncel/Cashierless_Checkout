@@ -19,12 +19,32 @@ namespace Cashierless_Checkout
 
         private void customPictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void customButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            CheckoutFrm chkFrm = new CheckoutFrm();
+            chkFrm.Show();
+            this.Hide();
+           
+        }
+
+        private void lnkYntGr_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginFrm loginFrm = new LoginFrm();
+            loginFrm.Show();
+            this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
