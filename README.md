@@ -20,9 +20,16 @@ My Object-Oriented Programming requested a project by me. I decided this project
 * [Entity-Framework][10]: Entity Framework is an open-source ORM framework for .NET applications supported by Microsoft. It enables developers to work with data using objects of domain specific classes without focusing on the underlying database tables and columns where this data is stored.
  
 
-App Video
+Windows App Video
 --------------
 
+https://user-images.githubusercontent.com/26549014/211336775-8531462d-5ecd-47c1-82ed-969e83a62158.mp4
+
+
+Mobile  Video
+--------------
+
+https://user-images.githubusercontent.com/26549014/211336749-f28021f1-0038-4b31-b122-ad3582b3b288.mp4
 
 
  ```
